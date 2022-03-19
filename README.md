@@ -2,13 +2,13 @@
 Creates all the Azure resources you need to stand up a VM in the cloud for development or demo purposes.
 
 ## What gets created
+Per: https://docs.microsoft.com/en-us/azure/virtual-machines/windows/overview
 - Resource Group
 - Virtual Network
 - Subnet
 - Public IP
 - Network Interface
 - Virtual Machine
-Per: https://docs.microsoft.com/en-us/azure/virtual-machines/windows/overview
 
 ## WARNING
 This creates a VM in your azure subscription with a public IP. No guarantees are made about the security of any of this. Also there will likely be Azure charges associated with the resources this creates. Use at your own financial and security risk.
