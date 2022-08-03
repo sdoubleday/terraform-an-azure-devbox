@@ -5,8 +5,8 @@ resource "azurerm_windows_virtual_machine" "example" {
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   size                = "Standard_B2ms"
-  admin_username      = "adminuser"
-  admin_password      = "S3riously,ThisIsATest."
+  admin_username      = var.vm_username
+  admin_password      = var.vm_password
   network_interface_ids = [
     azurerm_network_interface.nic1.id,
   ]
