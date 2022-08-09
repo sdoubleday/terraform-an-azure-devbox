@@ -1,4 +1,4 @@
-rg_Name = "rg1"
+rg_name = "rg1"
 location = "eastus"
 vm_name = "sqldevvm1"
 computer_name = "sqldev1"

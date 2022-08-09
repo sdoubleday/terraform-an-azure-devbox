@@ -46,10 +46,21 @@ terraform destroy;
 - Dropping resources should halt further Azure charges, and you can double check that in portal.azure.com > Resource Groups and portal.azure.com > Cost Management. 
 - Remember it takes about 24-48 hours for charges to appear in cost management, though changes to resources are visible after refreshing your browser.
 
+### Alternate usage with PowerShell Get-Credential popup
+
+This version lets you specify the username and password in a popup.
+
+```powershell
+$cred = get-credential; #Specify your username and password in the popup
+terraform apply -var-file="terraform.tfvars"  -var "vm_username=$($cred.UserName)" -var "vm_password=$($cred.GetNetworkCredential().Password)";
+```
+
 ## Configuration
 
-- You can mess with the variables in the file .\terraform.tfvars
-- By default, this is set up to use a fairly inexpensive 2 core, 8 GB of RAM server in the EastUS region of Azure. At time of writing, this whole setup runs about $0.10-$0.20 per hour.
+- You can mess with the variables:
+  - In the file .\terraform.tfvars
+  - Or at the command line, thus: ```-var "rg_name=ExampleRG"```
+- By default, this is set up to use a fairly inexpensive server with 2 cores and 8 GB of RAM in the EastUS region of Azure. At time of writing, this whole setup runs about $0.10-$0.20 per hour (your rates may vary).
 
 ## Prerequisites
 
