@@ -16,7 +16,7 @@ resource "azurerm_subnet" "subnet" {
 }
 
 resource "azurerm_public_ip" "ilpip" {
-  name                = "$(var.vm_name)-PubIP"
+  name                = "${var.vm_name}-PubIP"
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   allocation_method   = "Dynamic"
