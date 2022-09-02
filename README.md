@@ -60,7 +60,10 @@ terraform apply -var-file="terraform.tfvars"  -var "vm_username=$($cred.UserName
 - You can mess with the variables:
   - In the file .\terraform.tfvars
   - Or at the command line, thus: ```-var "rg_name=ExampleRG"```
-- By default, this is set up to use a fairly inexpensive server with 4 cores and 16 GB of RAM in the EastUS region of Azure. At time of writing, this whole setup runs about $0.20-$0.30 per hour (your rates may vary).
+- By default, this is set up to use a fairly inexpensive server with 4 cores and 16 GB of RAM in the EastUS region of Azure. At time of writing, this whole setup runs about $0.10-$0.20 per hour (your rates may vary).
+- By default, this is set up to use a Developer edition of SQL Server on Windows Server 2022.
+  - To find this image in the Azure Marketplace: [https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoftsqlserver.sql2019-ws2022?tab=PlansAndPrice](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/microsoftsqlserver.sql2019-ws2022?tab=PlansAndPrice)
+  - Or on az-vm-image.info: [https://az-vm-image.info/?cmd=--all+--offer+sql2019-ws2022+--sku+sqldev-gen2](https://az-vm-image.info/?cmd=--all+--offer+sql2019-ws2022+--sku+sqldev-gen2)
 
 ## Prerequisites
 
