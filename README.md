@@ -60,7 +60,7 @@ terraform apply -var-file="terraform.tfvars"  -var "vm_username=$($cred.UserName
 - You can mess with the variables:
   - In the file .\terraform.tfvars
   - Or at the command line, thus: ```-var "rg_name=ExampleRG"```
-- By default, this is set up to use a fairly inexpensive server with 2 cores and 8 GB of RAM in the EastUS region of Azure. At time of writing, this whole setup runs about $0.10-$0.20 per hour (your rates may vary).
+- By default, this is set up to use a fairly inexpensive server with 4 cores and 16 GB of RAM in the EastUS region of Azure. At time of writing, this whole setup runs about $0.20-$0.30 per hour (your rates may vary).
 
 ## Prerequisites
 
