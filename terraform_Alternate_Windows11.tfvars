@@ -1,4 +1,4 @@
-rg_name = "rg1"
+rg_name = "rgrunner"
 location = "eastus"
 vm_name = "windowsvm1"
 computer_name = "windows1"
