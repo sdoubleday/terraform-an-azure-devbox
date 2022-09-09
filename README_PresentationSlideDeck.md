@@ -25,7 +25,7 @@ marp: true
 
 ```powershell
 #Create an empty powershell profile if none already exists
-if(-not $(test-path $profile)) {new-item -ItemType File -Path $profile};
+if(-not $(test-path $profile)) {new-item -ItemType File -Path $profile -Force};
 #Install Chocolatey Package Manager for Windows
 Set-ExecutionPolicy Bypass -Scope Process -Force;
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072;
